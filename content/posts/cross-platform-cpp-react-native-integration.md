@@ -17,6 +17,30 @@ The architecture has three layers. At the top, platform-specific JavaScript and 
 
 This bottom layer compiles to native code for iOS and Android, and to WebAssembly for the web. The same algorithms written in the early 2000s run on all three platforms today without modification.
 
+```mermaid
+graph TD
+    subgraph Platform["Platform layer, React + React Native"]
+        IOS["iOS<br/>React Native + Objective-C++"]
+        AND["Android<br/>React Native + JNI"]
+        WEB["Web PWA<br/>React + Vite + WASM"]
+    end
+    subgraph Shared["@common / @abstractions, shared TypeScript"]
+        UI["UI components, Redux, types"]
+        ABS["Platform abstractions<br/>navigation, Firebase, audio"]
+    end
+    BRIDGE["JSON command bridge<br/>one line per command"]
+    CPP["C++ signal processing<br/>FFT, pitch, strobe<br/>written early 2000s"]
+    IOS --> ABS
+    AND --> ABS
+    WEB --> ABS
+    UI --> BRIDGE
+    ABS --> BRIDGE
+    BRIDGE --> CPP
+    CPP -. native lib .-> IOS
+    CPP -. native lib .-> AND
+    CPP -. Emscripten WASM .-> WEB
+```
+
 ### Platform Layer: React + React Native Web
 
 Each platform has its own entry point. iOS and Android use React Native. The web uses React with Vite. Despite the different frameworks, all three can share React components through the react-native-web package.
@@ -79,25 +103,21 @@ The pattern is consistent across all command handlers. If a handler touches shar
 
 ### StroboPro: Professional Audio Tuner
 
-StroboPro uses this architecture for its audio processing. The C++ layer handles pitch detection and strobe display. The JSON command bridge lets the JavaScript side control the tuner. The same code runs on the web, iOS, and Android.
+[StroboPro](https://strobopro.se) uses this architecture for its audio processing. The C++ layer handles pitch detection and strobe display. The JSON command bridge lets the JavaScript side control the tuner. The same code runs on the web, iOS, and Android.
 
-Adding a new audio command takes one line in the C++ command table. The iOS, Android, and web apps all gain the feature simultaneously.
+Adding a new audio command takes one line in the C++ command table. The iOS, Android, and web apps all gain the feature simultaneously. Try it on the [App Store](https://apps.apple.com/us/app/precise-strobe-tuner-strobopro/id6455632707), [Google Play](https://play.google.com/store/search?q=strobopro&c=apps&hl=en-US), or [strobopro.se](https://strobopro.se).
 
 ### Zooked: Multi-Platform Gaming
 
-Zooked takes the pattern further with four platforms. A PWA controller, mobile controller, Chromecast receiver, and Firebase Functions all share code through the same `@common/` and `@abstractions/` system.
+[Zooked](https://apps.apple.com/app/id6757303318) takes the pattern further with four platforms. A PWA controller, mobile controller, Chromecast receiver, and Firebase Functions all share code through the same `@common/` and `@abstractions/` system.
 
-Game screens written once run on all platforms. Platform-specific implementations hide navigation, Firebase, and routing differences.
-
-### Hornswoggle: Social Gaming
-
-Hornswoggle uses identical patterns to Zooked, proving the architecture scales across different types of apps. React Native web enables shared controllers between PWA and mobile. Platform abstractions isolate differences.
+Game screens written once run on all platforms. Platform-specific implementations hide navigation, Firebase, and routing differences. Available on the [App Store](https://apps.apple.com/app/id6757303318) and [Google Play](https://play.google.com/store/apps/details?id=se.applicaudia.zooked).
 
 ## The Trade-Offs
 
 This approach requires upfront investment. Setting up the build system, C++ compilation, and platform bridges takes time. Emscripten adds complexity to the web build.
 
-Debugging跨platform issues can be challenging. A memory leak might only appear on one platform. Thread timing issues might not show up in development.
+Debugging cross-platform issues can be challenging. A memory leak might only appear on one platform. Thread timing issues might not show up in development.
 
 However, the long-term benefits outweigh the initial cost. Features added once work everywhere. Bugs fixed in shared code fix across all platforms. The architecture pays dividends over years, not months.
 
@@ -107,7 +127,7 @@ Start small. Share a single component between platforms. Build a simple C++ modu
 
 Use path aliases like `@common/` and `@abstractions/` from day one. They enforce separation and make it clear where code should live.
 
-Learn from existing projects. StroboPro, Zooked, and Hornswoggle all demonstrate this pattern in production. The code is open for inspection.
+Learn from existing projects. StroboPro and Zooked both demonstrate this pattern in production, and both are linked from the [Applicaudia home page](https://applicaudia.se/home/).
 
 ## Why This Matters for Solo Developers
 
@@ -119,4 +139,4 @@ The goal is not to avoid platform-specific code entirely. Some code must be plat
 
 ---
 
-*This post is part of the [Applicaudia blog](https://applicaudia.se/blog/). For more articles and insights from Applicaudia AB, visit [applicaudia.se](https://applicaudia.se). See the architecture in action at [strobopro.se](https://strobopro.se), [zooked.app](https://zooked.app), and [hornswoggle.app](https://hornswoggle.app).*
+*This post is part of the [Applicaudia blog](https://applicaudia.se/blog/). For more articles and insights from Applicaudia AB, visit [applicaudia.se](https://applicaudia.se). See the architecture in action: [StroboPro](https://strobopro.se) ([App Store](https://apps.apple.com/us/app/precise-strobe-tuner-strobopro/id6455632707) / [Play](https://play.google.com/store/search?q=strobopro&c=apps&hl=en-US)) and [Zooked](https://apps.apple.com/app/id6757303318) ([Play](https://play.google.com/store/apps/details?id=se.applicaudia.zooked)). All apps are listed on the [Applicaudia home page](https://applicaudia.se/home/).*
