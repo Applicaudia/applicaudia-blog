@@ -1,0 +1,42 @@
+:root {
+  /* Copy from home/src/App.css lines 1064-1073 */
+  --primary-color: #4d9fff;
+  --secondary-color: #1a2535;
+  --accent-color: #ff6b5e;
+  --background-color: #121212;
+  --darker-background: #0a0a0a;
+  --text-color: #e0e0e0;
+  --card-background: #1e1e1e;
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--accent-color);
+}

@@ -1,0 +1,16 @@
+# Blog Posts
+
+Markdown blog posts go here.
+
+Example post structure:
+
+---
+title: "Post Title"
+date: "2026-06-17"
+excerpt: "Brief description for listing page"
+tags: ["tag1", "tag2"]
+---
+
+# Post Content
+
+Article content in markdown...

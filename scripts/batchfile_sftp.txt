@@ -1,0 +1,4 @@
+# Blog deployment
+-mkdir /customers/4/7/b/cfg90a6nm/webroots/www/blog
+put ./dist/*.* /customers/4/7/b/cfg90a6nm/webroots/www/blog/
+put -R ./dist/* /customers/4/7/b/cfg90a6nm/webroots/www/blog/
