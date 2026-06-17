@@ -9,7 +9,7 @@ export default function PostCard({ post }: PostCardProps) {
   return (
     <article className="post-card">
       <h2 className="post-card-title">
-        <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+        <Link to={`/${post.slug}`}>{post.title}</Link>
       </h2>
       <div className="post-card-meta">
         <time dateTime={post.date}>
@@ -30,7 +30,7 @@ export default function PostCard({ post }: PostCardProps) {
       {post.excerpt && (
         <p className="post-card-excerpt">{post.excerpt}</p>
       )}
-      <Link to={`/blog/${post.slug}`} className="post-card-link">
+      <Link to={`/${post.slug}`} className="post-card-link">
         Read more →
       </Link>
     </article>

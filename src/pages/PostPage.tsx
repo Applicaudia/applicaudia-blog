@@ -10,7 +10,7 @@ export default function PostPage() {
     <div className="container">
       <header className="app-header">
         <nav className="blog-nav">
-          <Link to="/blog/">← Back to Blog</Link>
+          <Link to="/">← Back to Blog</Link>
         </nav>
       </header>
 
@@ -18,7 +18,7 @@ export default function PostPage() {
         {!post ? (
           <div className="error">
             <p>Post not found.</p>
-            <Link to="/blog/">← Back to Blog</Link>
+            <Link to="/">← Back to Blog</Link>
           </div>
         ) : (
           <BlogPost post={post} />
