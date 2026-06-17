@@ -1,5 +1,3 @@
-import matter from 'gray-matter';
-
 export interface Post {
   slug: string;
   title: string;
@@ -9,57 +7,73 @@ export interface Post {
   content: string;
 }
 
-// Get all posts from markdown files
-export async function getAllPosts(): Promise<Post[]> {
-  const modules = import.meta.glob('/content/posts/**/*.md', { query: '?raw', import: 'default' });
-
-  const posts: Post[] = [];
-
-  for (const path in modules) {
-    const raw = await modules[path]() as string;
-    const { data, content } = matter(raw);
-
-    // Extract slug from path
-    const slug = path.replace('/content/posts/', '').replace('.md', '');
-
-    posts.push({
-      slug,
-      title: data.title || 'Untitled',
-      date: data.date || new Date().toISOString().split('T')[0],
-      excerpt: data.excerpt || '',
-      tags: data.tags || [],
-      content,
-    });
+// Minimal front-matter parser (YAML subset): title, date, excerpt, tags.
+// Avoids gray-matter's eval/require which is fragile in browser bundles.
+function parseFrontMatter(raw: string): { data: Record<string, unknown>; content: string } {
+  const fmMatch = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
+  if (!fmMatch) {
+    return { data: {}, content: raw };
   }
+  const block = fmMatch[1];
+  const content = fmMatch[2];
+  const data: Record<string, unknown> = {};
 
-  // Sort by date (newest first)
-  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  for (const line of block.split(/\r?\n/)) {
+    const m = line.match(/^([\w-]+):\s*(.*)$/);
+    if (!m) continue;
+    const key = m[1];
+    let val: unknown = m[2].trim();
+
+    // Strip surrounding quotes
+    if (typeof val === 'string' && /^".*"$/.test(val)) {
+      val = val.slice(1, -1);
+    }
+
+    // Inline array: [a, b, c]
+    const arrMatch = typeof val === 'string' ? val.match(/^\[(.*)\]$/) : null;
+    if (arrMatch) {
+      val = arrMatch[1]
+        .split(',')
+        .map((s) => s.trim().replace(/^"|"$/g, ''))
+        .filter(Boolean);
+    }
+    data[key] = val;
+  }
+  return { data, content };
 }
 
-// Get a single post by slug
-export async function getPostBySlug(slug: string): Promise<Post | null> {
-  const modules = import.meta.glob('/content/posts/**/*.md', { query: '?raw', import: 'default' });
+// All posts are inlined at build time (eager). No runtime chunk fetch.
+const modules = import.meta.glob('/content/posts/**/*.md', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>;
 
-  const path = `/content/posts/${slug}.md`;
-
-  if (!(path in modules)) {
-    return null;
-  }
-
-  const raw = await modules[path]() as string;
-  const { data, content } = matter(raw);
-
+function buildPost(path: string, raw: string): Post {
+  const { data, content } = parseFrontMatter(raw);
+  const slug = path.replace('/content/posts/', '').replace(/\.md$/, '');
+  const tags = Array.isArray(data.tags) ? (data.tags as string[]) : [];
   return {
     slug,
-    title: data.title || 'Untitled',
-    date: data.date || new Date().toISOString().split('T')[0],
-    excerpt: data.excerpt || '',
-    tags: data.tags || [],
+    title: (data.title as string) || 'Untitled',
+    date: (data.date as string) || '1970-01-01',
+    excerpt: (data.excerpt as string) || '',
+    tags,
     content,
   };
 }
 
-// Parse front-matter from markdown content
-export function parseFrontMatter(content: string) {
-  return matter(content);
+// Get all posts, sorted newest first
+export function getAllPosts(): Post[] {
+  return Object.entries(modules)
+    .map(([path, raw]) => buildPost(path, raw))
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+// Get a single post by slug
+export function getPostBySlug(slug: string): Post | null {
+  const path = `/content/posts/${slug}.md`;
+  const raw = modules[path];
+  if (!raw) return null;
+  return buildPost(path, raw);
 }
