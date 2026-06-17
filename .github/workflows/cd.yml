@@ -3,13 +3,13 @@ name: Build and Deploy Blog
 on:
   push:
     branches: ["main", "devel"]
-  pull_request:
-    branches:
-      - "*"
   workflow_dispatch:
 
 env:
   ID_ED25519: ${{ secrets.ID_ED25519 }}
+
+permissions:
+  contents: read
 
 jobs:
   build-and-deploy:
