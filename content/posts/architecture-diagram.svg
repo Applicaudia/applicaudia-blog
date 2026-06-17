@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#121212"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#4d9fff" font-family="sans-serif" font-size="24" font-weight="bold">
+    Cross-Platform Architecture
+  </text>
+
+  <!-- Platform Layer -->
+  <g transform="translate(50, 80)">
+    <!-- iOS Platform -->
+    <rect x="0" y="0" width="220" height="120" rx="8" fill="#1e1e1e" stroke="#4d9fff" stroke-width="2"/>
+    <text x="110" y="30" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="16" font-weight="bold">iOS</text>
+    <text x="110" y="55" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="12">React Native</text>
+    <text x="110" y="75" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="12">Swift/Objective-C++</text>
+    <text x="110" y="95" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="12">Core Audio</text>
+
+    <!-- Android Platform -->
+    <rect x="290" y="0" width="220" height="120" rx="8" fill="#1e1e1e" stroke="#4d9fff" stroke-width="2"/>
+    <text x="400" y="30" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="16" font-weight="bold">Android</text>
+    <text x="400" y="55" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="12">React Native</text>
+    <text x="400" y="75" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="12">Java/JNI</text>
+    <text x="400" y="95" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="12">OpenSL ES</text>
+
+    <!-- Web Platform -->
+    <rect x="530" y="0" width="220" height="120" rx="8" fill="#1e1e1e" stroke="#4d9fff" stroke-width="2"/>
+    <text x="640" y="30" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="16" font-weight="bold">Web (PWA)</text>
+    <text x="640" y="55" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="12">React + Vite</text>
+    <text x="640" y="75" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="12">WebAssembly</text>
+    <text x="640" y="95" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="12">Emscripten</text>
+  </g>
+
+  <!-- Shared Components Layer -->
+  <g transform="translate(50, 230)">
+    <!-- @common components -->
+    <rect x="120" y="0" width="560" height="100" rx="8" fill="#1a2535" stroke="#ff6b5e" stroke-width="2"/>
+    <text x="400" y="30" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="16" font-weight="bold">@common Components</text>
+    <text x="400" y="55" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="12">React + React Native Web</text>
+    <text x="400" y="75" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="12">Shared UI, Types, Redux, Utils</text>
+
+    <!-- @abstractions layer -->
+    <rect x="120" y="120" width="180" height="80" rx="8" fill="#1e1e1e" stroke="#4d9fff" stroke-width="1"/>
+    <text x="210" y="145" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="12">iOS</text>
+    <text x="210" y="165" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="10">@abstractions</text>
+    <text x="210" y="180" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="10">Navigation, Audio</text>
+
+    <rect x="310" y="120" width="180" height="80" rx="8" fill="#1e1e1e" stroke="#4d9fff" stroke-width="1"/>
+    <text x="400" y="145" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="12">Android</text>
+    <text x="400" y="165" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="10">@abstractions</text>
+    <text x="400" y="180" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="10">Navigation, Audio</text>
+
+    <rect x="500" y="120" width="180" height="80" rx="8" fill="#1e1e1e" stroke="#4d9fff" stroke-width="1"/>
+    <text x="590" y="145" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="12">Web</text>
+    <text x="590" y="165" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="10">@abstractions</text>
+    <text x="590" y="180" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="10">Firebase, Routing</text>
+  </g>
+
+  <!-- JSON Command Bridge -->
+  <g transform="translate(50, 460)">
+    <rect x="120" y="0" width="560" height="80" rx="8" fill="#1a2535" stroke="#4d9fff" stroke-width="2"/>
+    <text x="400" y="25" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="16" font-weight="bold">JSON Command Bridge</text>
+    <text x="400" y="50" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="12">json_commands.ts → nlohmann/json → json_command_handlers.cpp</text>
+    <text x="400" y="70" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="11">Single C++ line adds commands across all platforms</text>
+  </g>
+
+  <!-- C++ Processing Layer -->
+  <g transform="translate(50, 560)">
+    <rect x="120" y="0" width="560" height="80" rx="8" fill="#1a2535" stroke="#ff6b5e" stroke-width="2"/>
+    <text x="400" y="25" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="16" font-weight="bold">C++ Signal Processing (Shared)</text>
+    <text x="400" y="50" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="12">Audio Algorithms • FFT • Pitch Detection • Strobe Display</text>
+    <text x="400" y="70" text-anchor="middle" fill="#e0e0e0" font-family="sans-serif" font-size="11">Compiled to: Native iOS/Android + WebAssembly (Web)</text>
+  </g>
+
+  <!-- Connection Lines -->
+  <g stroke="#4d9fff" stroke-width="2" fill="none" opacity="0.6">
+    <!-- Platform to Shared -->
+    <line x1="160" y1="200" x2="200" y2="230"/>
+    <line x1="400" y1="200" x2="400" y2="230"/>
+    <line x1="640" y1="200" x2="600" y2="230"/>
+
+    <!-- Shared to Bridge -->
+    <line x1="400" y1="350" x2="400" y2="460"/>
+    <line x1="210" y1="350" x2="210" y2="400"/>
+    <line x1="210" y1="400" x2="350" y2="460"/>
+    <line x1="590" y1="350" x2="590" y2="400"/>
+    <line x1="590" y1="400" x2="450" y2="460"/>
+
+    <!-- Bridge to C++ -->
+    <line x1="400" y1="540" x2="400" y2="560"/>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(50, 660)">
+    <rect x="0" y="0" width="30" height="15" fill="#1e1e1e" stroke="#4d9fff" stroke-width="2"/>
+    <text x="40" y="12" fill="#e0e0e0" font-family="sans-serif" font-size="12">Platform Layer</text>
+
+    <rect x="200" y="0" width="30" height="15" fill="#1a2535" stroke="#ff6b5e" stroke-width="2"/>
+    <text x="240" y="12" fill="#e0e0e0" font-family="sans-serif" font-size="12">Shared Code</text>
+
+    <rect x="400" y="0" width="30" height="15" fill="#1e1e1e" stroke="#4d9fff" stroke-width="1"/>
+    <text x="440" y="12" fill="#e0e0e0" font-family="sans-serif" font-size="12">Platform-Specific</text>
+  </g>
+
+  <!-- App Examples -->
+  <g transform="translate(620, 660)">
+    <text x="0" y="12" fill="#e0e0e0" font-family="sans-serif" font-size="12" font-weight="bold">Examples:</text>
+    <text x="0" y="30" fill="#e0e0e0" font-family="sans-serif" font-size="11">• StroboPro (Audio)</text>
+    <text x="0" y="46" fill="#e0e0e0" font-family="sans-serif" font-size="11">• Zooked (Gaming)</text>
+    <text x="0" y="62" fill="#e0e0e0" font-family="sans-serif" font-size="11">• Hornswoggle (Social)</text>
+  </g>
+</svg>
