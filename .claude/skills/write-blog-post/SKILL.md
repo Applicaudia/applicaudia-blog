@@ -20,6 +20,7 @@ Interview the user to nail down the article concept. **CRITICAL: Ask exactly ONE
 3. **Key phrase:** Suggest 2–3 candidate focus keyphrases. Ask the user to pick one.
 4. **Key points:** "List 3–5 key points you want to cover. Don't worry about order."
 5. **Length target:** "Short (~500 words), medium (~1000 words), or long (~2000+ words)?"
+6. **Publish timing:** "Publish now (date = today), or schedule for a future date?" If scheduling, confirm the exact date and remind them it goes live at 00:00 UTC on that date (02:00 Sweden summer time), and only on the next weekly CI rebuild after that (so up to ~7 days later). See **Scheduling posts** below.
 
 After gathering all answers, summarize back to the user and confirm before drafting.
 
@@ -43,6 +44,10 @@ excerpt: "Brief description for listing page"
 tags: ["tag1", "tag2", "tag3"]
 ---
 ```
+
+The `date` field controls **go-live**, not just display order:
+- `date` today or earlier → post is live on the next build.
+- `date` in the future → post is **excluded from the build entirely** (not just hidden). It goes live at the first weekly CI rebuild on/after that date. See **Scheduling posts** below.
 
 **Content:**
 - Clear, direct sentences
@@ -122,6 +127,22 @@ Save the markdown file to `blog/content/posts/{slug}.md`.
 3. Push to main branch: `git push`
 4. GitHub Actions automatically builds and deploys to applicaudia.se/blog/
 5. Article live at applicaudia.se/blog/{slug}/ within minutes
+
+**For scheduled (future-dated) posts:** steps 1–3 are the same, but the post is NOT in the deployed bundle yet. It appears only after the first weekly CI rebuild on/after the post's `date`. Tell the user the expected go-live window. The post stays invisible (excluded from the build, no leak) until then.
+
+## Scheduling posts (future publish date)
+
+This blog supports scheduling via the `date` front-matter field. Set `date` to a future day and the post is held back automatically.
+
+**How it works (build-time exclusion):**
+- A pre-build script (`blog/scripts/filter-scheduled.ts`) runs before every `bun run build`. It reads each post's `date`, and moves any post whose date is still in the future out of `content/posts/` into a staging dir, then restores them after the build.
+- Because Vite's `import.meta.glob` only bundles what's in `content/posts/`, a future-dated post's content never ships in the JS bundle. No leak via view-source or devtools.
+- In local `bun run dev` the filter does not run, so all posts (including upcoming ones) are visible while writing.
+- Go-live is driven by the weekly CI rebuild (`cron: "17 3 * * 1"` in `blog/.github/workflows/cd.yml`). A post dated, say, Wednesday goes live on the following Monday's build.
+
+**Cutoff timezone:** `date: "YYYY-MM-DD"` is parsed as **UTC midnight**. A post dated `2026-07-01` goes live at `2026-07-01T00:00:00Z` (02:00 Sweden summer time). If the user wants it live earlier in a given timezone, set the date one day earlier.
+
+**Authoring a scheduled post:** just write the file with a future `date` and commit to `main`. No flags, no separate draft field. To force a scheduled post live sooner than the weekly cron, push any commit to `main` (a manual `workflow_dispatch` run builds but does not deploy).
 
 ## Content Ideas
 

@@ -4,6 +4,10 @@ on:
   push:
     branches: ["main", "devel"]
   workflow_dispatch:
+  schedule:
+    # Weekly, Monday ~03:17 UTC. Picks up scheduled (future-dated) posts whose
+    # date has elapsed. Runs only on the default branch (main).
+    - cron: "17 3 * * 1"
 
 env:
   ID_ED25519: ${{ secrets.ID_ED25519 }}
@@ -44,7 +48,7 @@ jobs:
           bun run build
 
       - name: Deploy
-        if: github.event_name == 'push' && (github.ref == 'refs/heads/devel' || github.ref == 'refs/heads/main')
+        if: (github.event_name == 'push' && (github.ref == 'refs/heads/devel' || github.ref == 'refs/heads/main')) || github.event_name == 'schedule'
         run: |
           echo "$ID_ED25519" > id_ed25519
           chmod 600 id_ed25519
