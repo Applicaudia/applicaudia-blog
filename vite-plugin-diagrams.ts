@@ -48,7 +48,10 @@ function renderMermaid(src: string): Promise<string> {
     const inp = resolve(dir, `mmd-${sha(src)}.mmd`);
     const out = resolve(dir, `mmd-${sha(src)}.svg`);
     writeFileSync(inp, src);
-    const child = spawn(mmdcBin, ['-i', inp, '-o', out, '-q', '-b', 'transparent'], { stdio: ['ignore', 'pipe', 'pipe'] });
+    const puppeteerCfg = fileURLToPath(new URL('puppeteer-config.json', import.meta.url));
+    const args = ['-i', inp, '-o', out, '-q', '-b', 'transparent'];
+    if (existsSync(puppeteerCfg)) args.push('-p', puppeteerCfg);
+    const child = spawn(mmdcBin, args, { stdio: ['ignore', 'pipe', 'pipe'] });
     let err = '';
     child.stderr.on('data', (d) => (err += d));
     child.on('error', reject);
@@ -133,13 +136,9 @@ async function processMarkdown(md: string, mdPath: string, addWatch: (f: string)
   let out = '';
   let cursor = 0;
   for (const job of jobs) {
-    let svg: string;
-    try {
-      svg = await job.svg;
-    } catch (err) {
-      console.error('[blog-diagrams]', mdPath, (err as Error).message);
-      continue; // leave original markdown in place
-    }
+    // Fail loud: a diagram conversion error must break the build (and show in
+    // the vite error overlay in dev) rather than silently ship raw markdown.
+    const svg = await job.svg;
     out += md.slice(cursor, job.start) + '\n\n' + svg + '\n\n';
     cursor = job.end;
   }
@@ -160,6 +159,6 @@ export default function diagramsPlugin() {
       const raw = readFileSync(mdPath, 'utf8');
       const converted = await processMarkdown(raw, mdPath, (f) => this.addWatchFile(f));
       return `export default ${JSON.stringify(converted)}`;
-    },
+    }
   };
 }
