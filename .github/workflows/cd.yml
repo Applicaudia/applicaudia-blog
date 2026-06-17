@@ -33,6 +33,12 @@ jobs:
         run: |
           bun install
 
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
       - name: Build
         run: |
           bun run build

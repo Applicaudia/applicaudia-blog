@@ -1,0 +1,13 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="page1">
+    <mxGraphModel dx="800" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="400" pageHeight="300" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="Build-time diagrams" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4d9fff;strokeColor=#1a2535;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="120" y="120" width="160" height="60" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

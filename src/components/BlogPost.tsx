@@ -2,6 +2,8 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeSanitize from 'rehype-sanitize';
+import rehypeRaw from 'rehype-raw';
+import { svgSchema } from '../utils/svg-sanitize-schema';
 import type { Post } from '../utils/markdown';
 import 'highlight.js/styles/github-dark.css';
 
@@ -35,7 +37,7 @@ export default function BlogPost({ post }: BlogPostProps) {
       <div className="blog-post-content">
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
-          rehypePlugins={[rehypeHighlight, rehypeSanitize]}
+          rehypePlugins={[rehypeRaw, [rehypeSanitize, svgSchema], rehypeHighlight]}
         >
           {post.content}
         </ReactMarkdown>

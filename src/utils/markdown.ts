@@ -44,7 +44,7 @@ function parseFrontMatter(raw: string): { data: Record<string, unknown>; content
 
 // All posts are inlined at build time (eager). No runtime chunk fetch.
 const modules = import.meta.glob('/content/posts/**/*.md', {
-  query: '?raw',
+  query: '?post',
   import: 'default',
   eager: true,
 }) as Record<string, string>;
