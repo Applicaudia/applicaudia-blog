@@ -1,30 +1,31 @@
 ---
 title: "Welcome to the Applicaudia Blog"
 date: "2026-06-17"
-excerpt: "We're excited to launch our new blog featuring articles on software, cybersecurity, and technology."
+excerpt: "I am building StroboPro, Courtpuzzle, LoopCloser, Ballercast, Zooked and other indie apps. This blog covers app development, audio/tuner tech, sports scheduling, and engineering deep-dives."
 tags: ["announcement", "welcome"]
 ---
 
 # Welcome to the Applicaudia Blog
 
-We're excited to announce the launch of the Applicaudia blog! This space will feature articles and insights on:
+I am building apps. This blog is where I write about how they work.
 
-- **Software Development** - Best practices, patterns, and architecture
-- **Cybersecurity** - Security fundamentals, cryptography, and secure coding
-- **Technology** - Emerging tech, tools, and industry insights
+Applicaudia used to be a consulting company. Now it is an indie app studio. I am shipping mobile apps, web apps, and tools for audio engineering, sports management, and party games.
+
+This space covers:
+
+- **App Development** - How I build and ship apps
+- **Audio and Tuner Tech** - Signal processing, pitch detection, strobe tuners
+- **Sports Scheduling** - Algorithms, automation, and real-world problems
+- **Engineering Deep-dives** - Architecture, cross-platform development, performance
+- **Build-in-Public** - What goes right, what goes wrong, what ships next
 
 ## What to Expect
 
-Our team at Applicaudia AB brings diverse experience from embedded systems, mobile apps, web development, and security. We'll be sharing:
+I write as a practitioner showing the work. Posts will cover technical challenges, architectural decisions, and lessons from building real products.
 
-1. Technical deep-dives into our projects
-2. Tutorials and guides
-3. Industry analysis and commentary
-4. Best practices we've learned along the way
+New content coming soon includes a "Building LoopCloser" series. That app is an AI-powered 1:1 notes tool for managers. I am entering it into RevenueCat's Ship-a-ton with a public store launch.
 
-## Stay Tuned
-
-This is just the beginning. We have a lot of great content planned, so check back often or follow us for updates!
+Check back soon or follow for updates.
 
 ---
 

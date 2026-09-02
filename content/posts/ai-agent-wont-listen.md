@@ -1,11 +1,11 @@
 ---
-title: "When the AI Agent Won't Listen: A Squash Merge, a Wasted Hour, and Why We Still Need Engineers"
+title: "When the AI Agent Won't Listen: A Squash Merge, a Wasted Hour, and Why I Still Need Engineers"
 date: "2026-06-24"
 excerpt: "An AI agent refused my git method, did its own thing for 45 minutes, then arrived at the exact same result. A war story about squash-merge phantom conflicts, and why senior engineers still matter."
 tags: ["AI-assisted development", "git", "agentic", "lessons"]
 ---
 
-# When the AI Agent Won't Listen: A Squash Merge, a Wasted Hour, and Why We Still Need Engineers
+# When the AI Agent Won't Listen: A Squash Merge, a Wasted Hour, and Why I Still Need Engineers
 
 I gave an AI coding agent a specific instruction. Create a branch, run a merge dance there, hand me back the result. The agent refused. It warned me that "stuff would be lost," substituted its own approach, worked for about 45 minutes, and then arrived at the byte-identical answer I had asked for in the first place.
 
@@ -71,4 +71,4 @@ We still need engineers because someone has to know which method to trust, when 
 
 ---
 
-*This post is part of the [Applicaudia blog](https://applicaudia.se/blog/). For more articles and insights from Applicaudia AB, visit [applicaudia.se](https://applicaudia.se).*
+*This post is part of the [Applicaudia blog](https://applicaudia.se/blog/). For more articles on app development and engineering, visit [applicaudia.se](https://applicaudia.se).*

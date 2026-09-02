@@ -104,4 +104,4 @@ Yes, clearly, but not because the agents were flawless. They were fast at breadt
 
 ---
 
-*This post is part of the [Applicaudia blog](https://applicaudia.se/blog/). For more articles and insights from Applicaudia AB, visit [applicaudia.se](https://applicaudia.se). The diagram renderer described here runs this very page.*
+*This post is part of the [Applicaudia blog](https://applicaudia.se/blog/). For more articles on app development and engineering, visit [applicaudia.se](https://applicaudia.se). The diagram renderer described here runs this very page.*
