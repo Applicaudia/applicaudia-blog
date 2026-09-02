@@ -49,7 +49,8 @@ function renderMermaid(src: string): Promise<string> {
     const out = resolve(dir, `mmd-${sha(src)}.svg`);
     writeFileSync(inp, src);
     const puppeteerCfg = fileURLToPath(new URL('puppeteer-config.json', import.meta.url));
-    const args = ['-i', inp, '-o', out, '-q', '-b', 'transparent'];
+    const mermaidCfg = fileURLToPath(new URL('mermaid-config.json', import.meta.url));
+    const args = ['-i', inp, '-o', out, '-q', '-b', 'transparent', '-c', mermaidCfg];
     if (existsSync(puppeteerCfg)) args.push('-p', puppeteerCfg);
     const child = spawn(mmdcBin, args, { stdio: ['ignore', 'pipe', 'pipe'] });
     let err = '';

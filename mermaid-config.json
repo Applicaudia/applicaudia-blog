@@ -1,0 +1,23 @@
+{
+  "theme": "base",
+  "themeVariables": {
+    "background": "transparent",
+    "primaryColor": "#e8eaf0",
+    "primaryTextColor": "#e8eaf0",
+    "primaryBorderColor": "#9aa1b0",
+    "lineColor": "#9aa1b0",
+    "secondaryColor": "#9aa1b0",
+    "tertiaryColor": "rgba(255,255,255,0.1)",
+    "fontSize": "16px",
+    "fontFamily": "system-ui, -apple-system, sans-serif",
+    "sectionBkgColor": "rgba(255,255,255,0.05)",
+    "altSectionBkgColor": "rgba(255,255,255,0.1)",
+    "gridColor": "rgba(255,255,255,0.2)",
+    "secondaryTextColor": "#b8ff5c",
+    "tertiaryTextColor": "#9aa1b0",
+    "borderColor": "rgba(255,255,255,0.2)",
+    "mainBkg": "rgba(184, 255, 92, 0.15)",
+    "nodeBorder": "#9aa1b0",
+    "nodeTextColor": "#e8eaf0"
+  }
+}

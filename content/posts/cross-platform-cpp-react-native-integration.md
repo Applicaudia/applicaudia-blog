@@ -19,26 +19,28 @@ This bottom layer compiles to native code for iOS and Android, and to WebAssembl
 
 ```mermaid
 graph TD
-    subgraph Platform["Platform layer, React + React Native"]
-        IOS["iOS<br/>React Native + Objective-C++"]
-        AND["Android<br/>React Native + JNI"]
-        WEB["Web PWA<br/>React + Vite + WASM"]
+    subgraph Platform["Platform layer: React + React Native"]
+        IOS["iOS: React Native + Objective-C++"]
+        AND["Android: React Native + JNI"]
+        WEB["Web PWA: React + Vite + WASM"]
     end
+
     subgraph Shared["@common / @abstractions, shared TypeScript"]
         UI["UI components, Redux, types"]
         ABS["Platform abstractions<br/>navigation, Firebase, audio"]
     end
+
     BRIDGE["JSON command bridge<br/>one line per command"]
+
     CPP["C++ signal processing<br/>FFT, pitch, strobe<br/>written early 2000s"]
-    IOS --> ABS
-    AND --> ABS
-    WEB --> ABS
-    UI --> BRIDGE
-    ABS --> BRIDGE
+
+    Platform --> Shared
+    Shared --> BRIDGE
     BRIDGE --> CPP
-    CPP -. native lib .-> IOS
-    CPP -. native lib .-> AND
-    CPP -. Emscripten WASM .-> WEB
+
+    CPP -. native lib .- IOS
+    CPP -. native lib .- AND
+    CPP -. Emscripten WASM .- WEB
 ```
 
 ### Platform Layer: React + React Native Web
