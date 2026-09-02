@@ -4,6 +4,7 @@ import rehypeHighlight from 'rehype-highlight';
 import rehypeSanitize from 'rehype-sanitize';
 import rehypeRaw from 'rehype-raw';
 import { svgSchema } from '../utils/svg-sanitize-schema';
+import { resolvePostImage } from '../utils/markdown';
 import type { Post } from '../utils/markdown';
 import 'highlight.js/styles/github-dark.css';
 
@@ -38,6 +39,16 @@ export default function BlogPost({ post }: BlogPostProps) {
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypeRaw, [rehypeSanitize, svgSchema], rehypeHighlight]}
+          components={{
+            img: ({ src, alt }) =>
+              typeof src === 'string' ? (
+                <img
+                  src={resolvePostImage(post.slug, src)}
+                  alt={alt ?? ''}
+                  loading="lazy"
+                />
+              ) : null,
+          }}
         >
           {post.content}
         </ReactMarkdown>

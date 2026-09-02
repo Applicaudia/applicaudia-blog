@@ -49,6 +49,29 @@ const modules = import.meta.glob('/content/posts/**/*.md', {
   eager: true,
 }) as Record<string, string>;
 
+// Raster images referenced from post markdown. ?url gives the hashed asset
+// path Vite emits to dist/assets, so relative refs resolve at runtime.
+const imageModules = import.meta.glob(
+  '/content/posts/**/*.{png,jpg,jpeg,webp,gif}',
+  { query: '?url', import: 'default', eager: true },
+) as Record<string, string>;
+
+// Resolve a markdown-relative image src (e.g. ./images/foo.png) inside the
+// post `slug` to its bundled asset URL. Absolute and data URLs pass through.
+export function resolvePostImage(slug: string, src: string): string {
+  if (/^(https?:)?\/\//i.test(src) || src.startsWith('data:')) return src;
+  const dir = slug.includes('/') ? slug.slice(0, slug.lastIndexOf('/')) : '';
+  const parts = `${dir}/${src}`.split('/');
+  const resolved: string[] = [];
+  for (const part of parts) {
+    if (part === '' || part === '.') continue;
+    if (part === '..') resolved.pop();
+    else resolved.push(part);
+  }
+  const key = `/content/posts/${resolved.join('/')}`;
+  return imageModules[key] ?? src;
+}
+
 function buildPost(path: string, raw: string): Post {
   const { data, content } = parseFrontMatter(raw);
   const slug = path.replace('/content/posts/', '').replace(/\.md$/, '');
