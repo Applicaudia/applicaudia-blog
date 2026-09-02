@@ -11,7 +11,7 @@ I am an engineering manager in Gothenburg, Sweden. I found a lot of friction in 
 
 My goal is to reduce friction in the life of a manager - but also improve the quality that their employees experience.
 
-Every 1:1 is preceded with an AI-guided preparation phase which can follow up on notes from previous 1:1 meetings, on the progress of the development plan, and on 360 feedback. The app will be opinionated and follow the principles of level 5 leadership.
+Every 1:1 is preceded with an AI-guided preparation phase which can follow up on notes from previous 1:1 meetings and on the progress of the development plan. I am building the same for 360 feedback: the parts that eat a manager's calendar, like mapping reviewers to reviewees, sending the requests, and summarizing what comes back. The app will be opinionated and follow the principles of level 5 leadership.
 
 ## What LoopCloser is today
 
