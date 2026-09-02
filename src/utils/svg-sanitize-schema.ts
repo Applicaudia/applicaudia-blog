@@ -13,6 +13,10 @@ const SVG_TAG_NAMES = [
   'pattern', 'filter', 'linearGradient', 'radialGradient', 'stop',
   'path', 'rect', 'circle', 'ellipse', 'line', 'polyline', 'polygon',
   'image', 'foreignObject', 'text', 'tspan', 'textPath', 'title', 'desc', 'a',
+  // mermaid-cli emits ALL its theming as an internal <style> block (CSS
+  // classes, no presentation attributes). Without this tag the sanitizer
+  // strips the block and every diagram renders default-black.
+  'style',
 ];
 
 // HAST property names. Broadened onto '*' so they apply wherever SVG uses them.
