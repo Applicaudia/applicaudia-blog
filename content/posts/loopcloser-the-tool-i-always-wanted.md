@@ -1,7 +1,7 @@
 ---
 title: 'The Tool I Always Wanted as an Engineering Manager'
 date: '2026-09-02'
-excerpt: 'I'm an Engineering Manager and I desired to solve the main friction points in my day-to-day life as a Manager.'
+excerpt: 'I'm an Engineering Manager and I desired to solve the main friction points in my day-to-day life of 1:1s, performance reviews, development plans, and closing loops, so I built LoopCloser.'
 tags: ['build-in-public', 'loopcloser', 'management', 'shipaton']
 ---
 

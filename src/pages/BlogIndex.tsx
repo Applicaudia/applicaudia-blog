@@ -8,7 +8,7 @@ export default function BlogIndex() {
     <div className="container">
       <header className="app-header">
         <h1>Applicaudia Blog</h1>
-        <p>Articles and insights on software, cybersecurity, and technology.</p>
+        <p>How I build and ship StroboPro, Courtpuzzle, LoopCloser and the rest - engineering deep-dives and build-in-public stories.</p>
         <nav className="blog-nav">
           <a href="/home/">← Back to Applicaudia</a>
         </nav>
