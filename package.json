@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "bun run scripts/filter-scheduled.ts pre && tsc -b && vite build ; bun run scripts/filter-scheduled.ts post",
+    "build": "bun run scripts/filter-scheduled.ts pre && tsc -b && vite build && bun run scripts/gen-sitemap.ts ; bun run scripts/filter-scheduled.ts post",
     "preview": "vite preview"
   },
   "dependencies": {
