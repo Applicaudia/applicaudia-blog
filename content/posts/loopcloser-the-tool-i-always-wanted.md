@@ -1,7 +1,7 @@
 ---
 title: 'The Tool I Always Wanted as an Engineering Manager'
 date: '2026-09-02'
-excerpt: 'I run 1:1s, and the commitments made in them keep evaporating. So I am building LoopCloser, and I am launching it in public before September 19.'
+excerpt: 'I'm an Engineering Manager and I desired to solve the main friction points in my day-to-day life as a Manager.'
 tags: ['build-in-public', 'loopcloser', 'management', 'shipaton']
 ---
 
