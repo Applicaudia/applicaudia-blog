@@ -15,7 +15,7 @@ The secret is balancing native performance and developer productivity by sharing
 
 The architecture has three layers.
 
-- Top: platform-specific TypeScript handle UI and platform integration.
+- Top: Common AND platform-specific TypeScript handle UI and platform integration.
 - Middle, a JSON command bridge forwards actions to native code - with 1:1 mapping to the top.
 - Bottom, a C++ processing layer handles DSP and other heavyweight, performance intensive stuff.
 
