@@ -1,13 +1,13 @@
 ---
-title: 'Cross-Platform C++ React Native Integration for Solo Developers'
+title: 'Solo Developers: Web, iOS, and Android React Native + C++ Integration'
 date: '2026-06-17'
 excerpt: 'How a single developer maintains native iOS, Android, and web apps by sharing C++ code, React components, and a JSON command bridge pattern that makes adding features take one line of code.'
-tags: ['architecture', 'cross-platform', 'C++', 'React Native', 'code-sharing']
+tags: ['architecture', 'cross-platform', 'C++', 'React Native', 'code-sharing', 'DRY']
 ---
 
 # Cross-Platform C++ React Native Integration for Solo Developers
 
-Building native apps for iOS, Android, and web as a solo developer sounds difficult, especially as a solo developers. I've managed to ship multiple apps that run on iOS, Android, and Web while maintaining a single codebase that one person can handle.
+Building native apps for iOS, Android, and web as a solo developer sounds difficult, especially as a solo developer. I've managed to ship multiple apps that run on iOS, Android, and Web while maintaining a single codebase that one person can handle.
 
 The secret is balancing native performance and developer productivity by sharing code intelligently across platforms, putting performance-critical logic in C++, and using a JSON command bridge (described below) that allows for adding new performance critical features with only a few lines of code.
 
