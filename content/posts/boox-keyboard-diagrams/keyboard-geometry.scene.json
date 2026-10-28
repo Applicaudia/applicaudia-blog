@@ -1,0 +1,643 @@
+{
+  "width": 900,
+  "height": 1200,
+  "title": "One screen, two keyboard tops",
+  "description": "Line-art schematic of the Onyx Boox mention-list bug: the keyboard API reports its top at y=901 while the keyboard actually starts at y=651; a list anchored to the reported top is drawn behind the keys, a list anchored to the measured nav bar top is visible.",
+  "stroke_width": 4,
+  "groups": [
+    {
+      "id": "phone",
+      "shapes": [
+        {
+          "id": "phone-body",
+          "type": "rect",
+          "x": 250,
+          "y": 40,
+          "width": 400,
+          "height": 1100,
+          "fill": "white"
+        }
+      ]
+    },
+    {
+      "id": "editor",
+      "shapes": [
+        {
+          "id": "editor-label",
+          "type": "text",
+          "x": 280,
+          "y": 70,
+          "width": 220,
+          "height": 24,
+          "font_size": 16,
+          "lines": [
+            "1:1 note editor"
+          ]
+        },
+        {
+          "id": "editor-line-1",
+          "type": "line",
+          "x1": 280,
+          "y1": 110,
+          "x2": 560,
+          "y2": 110
+        },
+        {
+          "id": "editor-line-2",
+          "type": "line",
+          "x1": 280,
+          "y1": 150,
+          "x2": 620,
+          "y2": 150
+        },
+        {
+          "id": "editor-line-3",
+          "type": "line",
+          "x1": 280,
+          "y1": 190,
+          "x2": 540,
+          "y2": 190
+        }
+      ]
+    },
+    {
+      "id": "right-list",
+      "shapes": [
+        {
+          "id": "list-box-visible",
+          "type": "rect",
+          "x": 270,
+          "y": 250,
+          "width": 360,
+          "height": 180,
+          "fill": "white"
+        },
+        {
+          "id": "list-row-1",
+          "type": "line",
+          "x1": 290,
+          "y1": 290,
+          "x2": 610,
+          "y2": 290
+        },
+        {
+          "id": "list-row-2",
+          "type": "line",
+          "x1": 290,
+          "y1": 330,
+          "x2": 590,
+          "y2": 330
+        },
+        {
+          "id": "list-row-3",
+          "type": "line",
+          "x1": 290,
+          "y1": 370,
+          "x2": 610,
+          "y2": 370
+        }
+      ]
+    },
+    {
+      "id": "nav-bar",
+      "shapes": [
+        {
+          "id": "nav-band",
+          "type": "rect",
+          "x": 250,
+          "y": 440,
+          "width": 400,
+          "height": 36,
+          "fill": "white"
+        },
+        {
+          "id": "nav-label",
+          "type": "text",
+          "x": 270,
+          "y": 446,
+          "width": 140,
+          "height": 24,
+          "font_size": 16,
+          "lines": [
+            "nav bar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wrong-list",
+      "shapes": [
+        {
+          "id": "list-box-hidden",
+          "type": "rect",
+          "x": 270,
+          "y": 520,
+          "width": 360,
+          "height": 180,
+          "fill": "white"
+        },
+        {
+          "id": "hidden-row-1",
+          "type": "line",
+          "x1": 290,
+          "y1": 560,
+          "x2": 610,
+          "y2": 560
+        },
+        {
+          "id": "hidden-row-2",
+          "type": "line",
+          "x1": 290,
+          "y1": 610,
+          "x2": 590,
+          "y2": 610
+        },
+        {
+          "id": "hidden-row-3",
+          "type": "line",
+          "x1": 290,
+          "y1": 660,
+          "x2": 610,
+          "y2": 660
+        }
+      ]
+    },
+    {
+      "id": "keyboard",
+      "shapes": [
+        {
+          "id": "keyboard-top-line",
+          "type": "line",
+          "x1": 250,
+          "y1": 480,
+          "x2": 650,
+          "y2": 480
+        },
+        {
+          "id": "key-1-1",
+          "type": "rect",
+          "x": 270,
+          "y": 500,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-1-2",
+          "type": "rect",
+          "x": 362,
+          "y": 500,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-1-3",
+          "type": "rect",
+          "x": 454,
+          "y": 500,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-1-4",
+          "type": "rect",
+          "x": 546,
+          "y": 500,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-2-1",
+          "type": "rect",
+          "x": 270,
+          "y": 560,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-2-2",
+          "type": "rect",
+          "x": 362,
+          "y": 560,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-2-3",
+          "type": "rect",
+          "x": 454,
+          "y": 560,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-2-4",
+          "type": "rect",
+          "x": 546,
+          "y": 560,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-3-1",
+          "type": "rect",
+          "x": 270,
+          "y": 620,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-3-2",
+          "type": "rect",
+          "x": 362,
+          "y": 620,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-3-3",
+          "type": "rect",
+          "x": 454,
+          "y": 620,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-3-4",
+          "type": "rect",
+          "x": 546,
+          "y": 620,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-5-1",
+          "type": "rect",
+          "x": 270,
+          "y": 680,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-5-2",
+          "type": "rect",
+          "x": 362,
+          "y": 680,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-5-3",
+          "type": "rect",
+          "x": 454,
+          "y": 680,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-5-4",
+          "type": "rect",
+          "x": 546,
+          "y": 680,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-6-1",
+          "type": "rect",
+          "x": 270,
+          "y": 740,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-6-2",
+          "type": "rect",
+          "x": 362,
+          "y": 740,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-6-3",
+          "type": "rect",
+          "x": 454,
+          "y": 740,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-6-4",
+          "type": "rect",
+          "x": 546,
+          "y": 740,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-7-1",
+          "type": "rect",
+          "x": 270,
+          "y": 800,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-7-2",
+          "type": "rect",
+          "x": 362,
+          "y": 800,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-7-3",
+          "type": "rect",
+          "x": 454,
+          "y": 800,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-7-4",
+          "type": "rect",
+          "x": 546,
+          "y": 800,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-8-1",
+          "type": "rect",
+          "x": 270,
+          "y": 860,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-8-2",
+          "type": "rect",
+          "x": 362,
+          "y": 860,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-8-3",
+          "type": "rect",
+          "x": 454,
+          "y": 860,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-8-4",
+          "type": "rect",
+          "x": 546,
+          "y": 860,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-9-1",
+          "type": "rect",
+          "x": 270,
+          "y": 920,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-9-2",
+          "type": "rect",
+          "x": 362,
+          "y": 920,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-9-3",
+          "type": "rect",
+          "x": 454,
+          "y": 920,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-9-4",
+          "type": "rect",
+          "x": 546,
+          "y": 920,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-10-1",
+          "type": "rect",
+          "x": 270,
+          "y": 980,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-10-2",
+          "type": "rect",
+          "x": 362,
+          "y": 980,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-10-3",
+          "type": "rect",
+          "x": 454,
+          "y": 980,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-10-4",
+          "type": "rect",
+          "x": 546,
+          "y": 980,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-11-1",
+          "type": "rect",
+          "x": 270,
+          "y": 1040,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-11-2",
+          "type": "rect",
+          "x": 362,
+          "y": 1040,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-11-3",
+          "type": "rect",
+          "x": 454,
+          "y": 1040,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        },
+        {
+          "id": "key-11-4",
+          "type": "rect",
+          "x": 546,
+          "y": 1040,
+          "width": 76,
+          "height": 44,
+          "fill": "white"
+        }
+      ]
+    },
+    {
+      "id": "reported-topline",
+      "shapes": [
+        {
+          "id": "reported-mark-left",
+          "type": "circle",
+          "cx": 250,
+          "cy": 700,
+          "r": 7,
+          "fill": "white"
+        },
+        {
+          "id": "reported-line",
+          "type": "line",
+          "x1": 250,
+          "y1": 700,
+          "x2": 650,
+          "y2": 700
+        },
+        {
+          "id": "reported-mark-right",
+          "type": "circle",
+          "cx": 650,
+          "cy": 700,
+          "r": 7,
+          "fill": "white"
+        }
+      ]
+    },
+    {
+      "id": "label-keyboard",
+      "shapes": [
+        {
+          "id": "keyboard-label",
+          "type": "text",
+          "x": 30,
+          "y": 495,
+          "width": 205,
+          "height": 55,
+          "font_size": 18,
+          "lines": [
+            "actual keyboard",
+            "top = ~651"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "label-reported",
+      "shapes": [
+        {
+          "id": "reported-label",
+          "type": "text",
+          "x": 30,
+          "y": 640,
+          "width": 205,
+          "height": 85,
+          "font_size": 18,
+          "lines": [
+            "Keyboard.metrics()",
+            "screenY = 901",
+            "says top is here"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "label-visible",
+      "shapes": [
+        {
+          "id": "visible-label",
+          "type": "text",
+          "x": 665,
+          "y": 270,
+          "width": 225,
+          "height": 70,
+          "font_size": 18,
+          "lines": [
+            "anchored to measured",
+            "nav bar top (651):",
+            "visible"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "label-hidden",
+      "shapes": [
+        {
+          "id": "hidden-label",
+          "type": "text",
+          "x": 665,
+          "y": 555,
+          "width": 225,
+          "height": 70,
+          "font_size": 18,
+          "lines": [
+            "anchored to reported",
+            "top (901): hidden",
+            "behind the keys"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="drawing" name="Line art">
+    <mxGraphModel page="1" pageScale="1" pageWidth="1200" pageHeight="800" background="#FFFFFF" grid="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="agent-desk" value="" style="group;" vertex="1" parent="1">
+          <mxGeometry x="423.0" y="468.0" width="494.0" height="279.0" as="geometry" />
+        </mxCell>
+        <mxCell id="desk-top" value="" style="strokeColor=#000000;fillColor=#FFFFFF;strokeWidth=4;rounded=0;shadow=0;shape=rectangle;" vertex="1" parent="agent-desk">
+          <mxGeometry x="7.0" y="2.0" width="480" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="desk-leg-left" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=0;lineCap=round;lineJoin=round;" edge="1" parent="agent-desk">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="37.0" y="20.0" as="sourcePoint" />
+            <mxPoint x="37.0" y="272.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="desk-leg-right" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=0;lineCap=round;lineJoin=round;" edge="1" parent="agent-desk">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="457.0" y="20.0" as="sourcePoint" />
+            <mxPoint x="457.0" y="272.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="desk-foot-left" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=0;lineCap=round;lineJoin=round;" edge="1" parent="agent-desk">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2.0" y="277.0" as="sourcePoint" />
+            <mxPoint x="72.0" y="277.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="desk-foot-right" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=0;lineCap=round;lineJoin=round;" edge="1" parent="agent-desk">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="422.0" y="277.0" as="sourcePoint" />
+            <mxPoint x="492.0" y="277.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="agent-monitor" value="" style="group;" vertex="1" parent="1">
+          <mxGeometry x="558.0" y="248.0" width="304.0" height="224.0" as="geometry" />
+        </mxCell>
+        <mxCell id="monitor-stand" value="" style="strokeColor=#000000;fillColor=#FFFFFF;strokeWidth=4;rounded=0;shadow=0;shape=rectangle;" vertex="1" parent="agent-monitor">
+          <mxGeometry x="132.0" y="202.0" width="24" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="monitor-base" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=0;lineCap=round;lineJoin=round;" edge="1" parent="agent-monitor">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="87.0" y="220.0" as="sourcePoint" />
+            <mxPoint x="202.0" y="220.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="monitor-bezel" value="" style="strokeColor=#000000;fillColor=#FFFFFF;strokeWidth=4;rounded=0;shadow=0;shape=rectangle;" vertex="1" parent="agent-monitor">
+          <mxGeometry x="2.0" y="2.0" width="300" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="monitor-screen" value="" style="strokeColor=#000000;fillColor=#FFFFFF;strokeWidth=4;rounded=0;shadow=0;shape=rectangle;" vertex="1" parent="agent-monitor">
+          <mxGeometry x="20.0" y="20.0" width="264" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="monitor-text" value="IT'S SERVER&#10;SIDE, OBVIOUSLY" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Courier New;fontStyle=1;fontSize=26;fontColor=#000000;strokeColor=none;fillColor=none;" vertex="1" parent="agent-monitor">
+          <mxGeometry x="36.0" y="42.0" width="234" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="agent-body" value="" style="group;" vertex="1" parent="1">
+          <mxGeometry x="420.0" y="254.0" width="134.0" height="218.0" as="geometry" />
+        </mxCell>
+        <mxCell id="agent-antenna" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=0;lineCap=round;lineJoin=round;" edge="1" parent="agent-body">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="50.0" y="48.0" as="sourcePoint" />
+            <mxPoint x="50.0" y="18.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="agent-antenna-ball" value="" style="strokeColor=#000000;fillColor=#000000;strokeWidth=4;rounded=0;shadow=0;shape=ellipse;" vertex="1" parent="agent-body">
+          <mxGeometry x="42.0" y="2.0" width="16" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="agent-head" value="" style="strokeColor=#000000;fillColor=#FFFFFF;strokeWidth=4;rounded=0;shadow=0;shape=ellipse;" vertex="1" parent="agent-body">
+          <mxGeometry x="2.0" y="48.0" width="96" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="agent-eye-left" value="" style="strokeColor=#000000;fillColor=#000000;strokeWidth=4;rounded=0;shadow=0;shape=ellipse;" vertex="1" parent="agent-body">
+          <mxGeometry x="62.0" y="80.0" width="8" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="agent-eye-right" value="" style="strokeColor=#000000;fillColor=#000000;strokeWidth=4;rounded=0;shadow=0;shape=ellipse;" vertex="1" parent="agent-body">
+          <mxGeometry x="82.0" y="78.0" width="8" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="agent-mouth" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=1;lineCap=round;lineJoin=round;" edge="1" parent="agent-body">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60.0" y="124.0" as="sourcePoint" />
+            <mxPoint x="94.0" y="118.0" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="77.0" y="128.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="agent-torso" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=0;lineCap=round;lineJoin=round;" edge="1" parent="agent-body">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="50.0" y="144.0" as="sourcePoint" />
+            <mxPoint x="50.0" y="216.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="agent-pointing-arm" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=0;lineCap=round;lineJoin=round;" edge="1" parent="agent-body">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="50.0" y="166.0" as="sourcePoint" />
+            <mxPoint x="132.0" y="151.0" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="110.0" y="156.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="chris-desk" value="" style="group;" vertex="1" parent="1">
+          <mxGeometry x="918.0" y="558.0" width="224.0" height="189.0" as="geometry" />
+        </mxCell>
+        <mxCell id="chris-desk-top" value="" style="strokeColor=#000000;fillColor=#FFFFFF;strokeWidth=4;rounded=0;shadow=0;shape=rectangle;" vertex="1" parent="chris-desk">
+          <mxGeometry x="2.0" y="2.0" width="220" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="chris-desk-leg" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=0;lineCap=round;lineJoin=round;" edge="1" parent="chris-desk">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="112.0" y="18.0" as="sourcePoint" />
+            <mxPoint x="112.0" y="182.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="chris-desk-foot" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=0;lineCap=round;lineJoin=round;" edge="1" parent="chris-desk">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="62.0" y="187.0" as="sourcePoint" />
+            <mxPoint x="162.0" y="187.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="chris-body" value="" style="group;" vertex="1" parent="1">
+          <mxGeometry x="943.0" y="204.0" width="137.0" height="348.0" as="geometry" />
+        </mxCell>
+        <mxCell id="chris-hair-left" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=1;lineCap=round;lineJoin=round;" edge="1" parent="chris-body">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="27.0" y="64.0" as="sourcePoint" />
+            <mxPoint x="52.0" y="48.0" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="37.0" y="48.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="chris-hair-right" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=1;lineCap=round;lineJoin=round;" edge="1" parent="chris-body">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="62.0" y="48.0" as="sourcePoint" />
+            <mxPoint x="89.0" y="62.0" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="77.0" y="50.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="chris-head" value="" style="strokeColor=#000000;fillColor=#FFFFFF;strokeWidth=4;rounded=0;shadow=0;shape=ellipse;" vertex="1" parent="chris-body">
+          <mxGeometry x="7.0" y="46.0" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="chris-brow-left" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=0;lineCap=round;lineJoin=round;" edge="1" parent="chris-body">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="32.0" y="84.0" as="sourcePoint" />
+            <mxPoint x="49.0" y="92.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="chris-brow-right" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=0;lineCap=round;lineJoin=round;" edge="1" parent="chris-body">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82.0" y="84.0" as="sourcePoint" />
+            <mxPoint x="65.0" y="92.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="chris-eye-left" value="" style="strokeColor=#000000;fillColor=#000000;strokeWidth=4;rounded=0;shadow=0;shape=ellipse;" vertex="1" parent="chris-body">
+          <mxGeometry x="37.0" y="96.0" width="8" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="chris-eye-right" value="" style="strokeColor=#000000;fillColor=#000000;strokeWidth=4;rounded=0;shadow=0;shape=ellipse;" vertex="1" parent="chris-body">
+          <mxGeometry x="69.0" y="96.0" width="8" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="chris-scream" value="" style="strokeColor=#000000;fillColor=#000000;strokeWidth=4;rounded=0;shadow=0;shape=ellipse;" vertex="1" parent="chris-body">
+          <mxGeometry x="42.0" y="108.0" width="30" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="chris-anger-mark-1" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=0;lineCap=round;lineJoin=round;" edge="1" parent="chris-body">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="103.0" y="42.0" as="sourcePoint" />
+            <mxPoint x="121.0" y="20.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="chris-anger-mark-2" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=0;lineCap=round;lineJoin=round;" edge="1" parent="chris-body">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="109.0" y="68.0" as="sourcePoint" />
+            <mxPoint x="135.0" y="54.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="chris-anger-mark-3" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=0;lineCap=round;lineJoin=round;" edge="1" parent="chris-body">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="87.0" y="28.0" as="sourcePoint" />
+            <mxPoint x="95.0" y="2.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="chris-torso" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=0;lineCap=round;lineJoin=round;" edge="1" parent="chris-body">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="57.0" y="146.0" as="sourcePoint" />
+            <mxPoint x="57.0" y="236.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="chris-arm-left" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=0;lineCap=round;lineJoin=round;" edge="1" parent="chris-body">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="57.0" y="176.0" as="sourcePoint" />
+            <mxPoint x="2.0" y="346.0" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="7.0" y="266.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="chris-arm-right" value="" style="strokeColor=#000000;fillColor=none;strokeWidth=4;rounded=0;shadow=0;edgeStyle=none;noEdgeStyle=1;startArrow=none;endArrow=none;curved=0;lineCap=round;lineJoin=round;" edge="1" parent="chris-body">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="57.0" y="176.0" as="sourcePoint" />
+            <mxPoint x="112.0" y="346.0" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="107.0" y="266.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="chris-laptop" value="" style="group;" vertex="1" parent="1">
+          <mxGeometry x="928.0" y="438.0" width="164.0" height="129.0" as="geometry" />
+        </mxCell>
+        <mxCell id="laptop-screen" value="" style="strokeColor=#000000;fillColor=#FFFFFF;strokeWidth=4;rounded=0;shadow=0;shape=rectangle;" vertex="1" parent="chris-laptop">
+          <mxGeometry x="2.0" y="2.0" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="laptop-text" value="NO&#10;NO&#10;NO" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;spacing=0;fontFamily=Courier New;fontStyle=1;fontSize=26;fontColor=#000000;strokeColor=none;fillColor=none;" vertex="1" parent="chris-laptop">
+          <mxGeometry x="37.0" y="27.0" width="90" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
