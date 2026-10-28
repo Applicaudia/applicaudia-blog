@@ -52,7 +52,7 @@ const modules = import.meta.glob('/content/posts/**/*.md', {
 // Raster images referenced from post markdown. ?url gives the hashed asset
 // path Vite emits to dist/assets, so relative refs resolve at runtime.
 const imageModules = import.meta.glob(
-  '/content/posts/**/*.{png,jpg,jpeg,webp,gif}',
+  '/content/posts/**/*.{png,jpg,jpeg,webp,gif,svg}',
   { query: '?url', import: 'default', eager: true },
 ) as Record<string, string>;
 
