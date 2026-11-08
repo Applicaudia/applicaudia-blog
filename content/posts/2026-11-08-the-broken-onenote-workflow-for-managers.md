@@ -35,11 +35,15 @@ Instead of post-meeting triage across multiple tabs, the editor routes commitmen
 
 This relational routing removes the post-meeting chore of manually re-sorting notes. Commitments land in the correct queue at the moment they are written.
 
+![LoopCloser 1:1 editor with inline person routing and task tracking](./images/loopcloser-1on1-notes.png)
+
 ## Monitoring relationship cadence
 
 Maintaining regular contact with direct reports is a core management discipline. In a busy engineering or product organization, schedule shifts and release crunches frequently push 1:1 meetings off the calendar.
 
 LoopCloser pairs note-taking with cadence tracking. A team radar monitors days elapsed since each person's last check-in and highlights relationships that exceed their target rhythm before a missed check-in turns into a multi-week gap.
+
+![LoopCloser agenda queue showing open discussion points grouped by teammate](./images/loopcloser-discussion-queue.png)
 
 ## Shared team docs versus private manager scratchpads
 

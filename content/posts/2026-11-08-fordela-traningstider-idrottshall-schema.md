@@ -43,6 +43,8 @@ I [CourtPuzzle](https://courtpuzzle.com) placerar lösaren passen deterministisk
 
 Om schemat inte går ihop visar CourtPuzzle vilka villkor som krockar med varandra. Systemet förklarar varför en giltig placering saknas, till exempel att tre lag kräver tisdagar mellan 17:00 och 18:30 i en stadsdel där föreningen bara har två tilldelade halltider. Det ger schemaläggaren ett sakligt underlag i stället för timmar av manuellt letande efter fel.
 
+![Veckoschema i CourtPuzzle med kollisionsfria träningstider per hall](./images/courtpuzzle-weekly-schedule.png)
+
 ## Enkla ledarlänkar utan inloggningskrav
 
 Ett vanligt misstag i föreningssystem är att tvinga alla ideella ledare att skapa konton och ladda ner nya appar bara för att svara på när de kan träna. Resultatet blir ofta uteblivna svar och mer tidsödande uppföljning via sms och mejl.

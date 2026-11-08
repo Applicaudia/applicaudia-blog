@@ -42,6 +42,8 @@ Every concentric band on the screen represents a separate harmonic window. The v
 
 Because each band evaluates incoming phase independently, the rings move independently. A musician adjusting an instrument can watch the fundamental and overtone rings settle at different rates.
 
+![Concentric harmonic strobe bands tracking independent phase in StroboPro](./images/strobopro-tuner-display.png)
+
 ## The acoustic test: inharmonic string partials
 
 Acoustic strings possess physical stiffness that introduces restoring force at shorter wavelengths. In heavy piano wires and wound bass strings, this stiffness causes upper overtones to vibrate faster than exact mathematical integer multiples.
@@ -64,6 +66,8 @@ This physical property provides a clear test bench for tuners:
 A repeatable benchmark requires an isolated acoustic reference free from room boundary reflections and soundboard resonance. [Fake Piano](https://applicaudia.se/fakepiano/) provides this reference as a browser-based inharmonic tone generator.
 
 Fake Piano uses Web Audio synthesis to generate piano tones modeled directly on the stiff-string equation. It allows users to set exact frequencies, select specific $B$ coefficients, and adjust cents offsets with 0.1 cent resolution.
+
+![Fake Piano tone generator with inharmonicity coefficient controls](./images/fakepiano-tone-generator.png)
 
 Here is a step-by-step test procedure:
 
