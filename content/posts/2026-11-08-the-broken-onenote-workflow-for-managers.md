@@ -13,14 +13,14 @@ Managing people conversations introduces a different data structure: relationshi
 
 When managers use general notebooks for 1:1s, the system works smoothly for the first two team members. Once a team expands to six or eight people, the freeform structure frays across three specific points of friction.
 
-## Why freeform pages break across people conversations
+## Why team conversations outgrow freeform pages
 
-The primary limitation of general-purpose note tools stems from how they organize information. They group text by notebook sections and page titles. In OneNote, many managers use the built-in Outlook Meeting Details button, which generates a fresh, date-stamped page for every calendar event.
+General-purpose note tools organize information by notebook sections and page titles. In OneNote, many managers use the built-in Outlook Meeting Details button, which generates a fresh, date-stamped page for every calendar event.
 
 This layout creates predictable operational bottlenecks:
 
 1. **Pages organize by date rather than relationship.** When you create a new page for every weekly check-in, reviewing what someone discussed two months ago requires clicking through eight separate page tabs. Keeping one continuous scrolling document per person creates the opposite problem: older commitments get buried at the top of an endless scroll.
-2. **Action items remain trapped on the page.** During a 1:1 with an engineer, they might mention a blocker that requires discussing with your product manager. In OneNote or Notion, that sentence sits on the engineer's page. Bringing it up in tomorrow's product sync requires manually copying and pasting the bullet point into a separate agenda.
+2. **Action items remain trapped on the page.** During a 1:1 with an engineer, they might mention a blocker that requires discussion with your product manager. In OneNote or Notion, that sentence sits on the engineer's page. Bringing it up in tomorrow's product sync requires manually copying and pasting the bullet point into a separate agenda.
 3. **Meeting cadences depend on calendar memory.** Freeform notebooks store text, but they have no awareness of time elapsed since your last conversation. Determining which team members have gone three weeks without a check-in requires manually scanning your calendar history.
 
 ## The mechanics of relational topic routing
@@ -30,7 +30,7 @@ A dedicated manager notebook structures text around team members rather than arb
 Instead of post-meeting triage across multiple tabs, the editor routes commitments using inline syntax directly as you type:
 
 - Type `@name` inline to route a sentence into that person's upcoming 1:1 queue so it appears on their next agenda automatically.
-- Tag `@todo` anywhere in a note to extract the action item into a central manager ledger with a direct backlink to the conversation.
+- Tag `@todo` anywhere in a note to extract the commitment into your central open loops queue with a direct backlink to the conversation.
 - Add `#tags` (such as `#Team Meeting`) to route discussion points into group agendas without leaving the current document.
 
 This relational routing removes the post-meeting chore of manually re-sorting notes. Commitments land in the correct queue at the moment they are written.
