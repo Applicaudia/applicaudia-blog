@@ -21,13 +21,17 @@ Single-pitch detection is the foundation of digital needle tuners. Algorithms su
 
 A strobe visualizer takes that single calculated frequency and compares it to a target note:
 
-$$\Delta f = f_{\text{detected}} - f_{\text{target}}$$
+$$
+\Delta f = f_{\text{detected}} - f_{\text{target}}
+$$
 
 The application then rotates a digital graphic wheel at a visual velocity proportional to $\Delta f$.
 
 Single-pitch detection is ideal for rapid onstage tuning. Chromatic pedal tuners and mobile apps excel at fast target acquisition in noisy rehearsal rooms, filtering out room bleed and locking onto the fundamental in milliseconds using negligible processing power. However, collapsing an entire audio spectrum into one scalar value discards the harmonic phase information that defines stroboscopic measurement.
 
 When a single-pitch visualizer receives a complex sound with stretched overtones, the engine faces an architectural constraint: the software only has one velocity variable. If the fundamental frequency and the overtones drift in opposite directions, the display cannot show them simultaneously.
+
+![Comparison between single-pitch visualizer rotation and true multi-harmonic strobe tracking](./images/strobe-vs-regular-tuner.png)
 
 ## How a true digital strobe tuner works
 
@@ -50,11 +54,15 @@ Acoustic strings possess physical stiffness that introduces restoring force at s
 
 Acousticians describe this frequency shift using the stiff-string equation:
 
-$$f_n = n \cdot f_1 \sqrt{\frac{1 + B n^2}{1 + B}}$$
+$$
+f_n = n \cdot f_1 \sqrt{\frac{1 + B n^2}{1 + B}}
+$$
 
 In this equation, $n$ is the partial number, $f_1$ is the actual fundamental frequency, and $B$ is the inharmonicity coefficient. 
 
 When $B = 0$ (an idealized flexible string), every harmonic is an exact integer multiple ($f_2 = 2f_1$). On a real piano or heavy steel string, $B > 0$. For a concert grand bass string with $B \approx 0.0004$, the second partial vibrates at $f_2 \approx 2.0006 \cdot f_1$, which is roughly 2.1 cents sharp relative to the fundamental.
+
+![Railsback stretch curve showing frequency deviation of harmonics due to string stiffness](./images/railsback-curve.png)
 
 This physical property provides a clear test bench for tuners:
 

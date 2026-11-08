@@ -2,3 +2,5 @@ node_modules
 dist
 .diagram-cache
 *.tsbuildinfo
+graphify-out
+

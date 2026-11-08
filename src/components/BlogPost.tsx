@@ -1,12 +1,15 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeSanitize from 'rehype-sanitize';
 import rehypeRaw from 'rehype-raw';
+import rehypeKatex from 'rehype-katex';
 import { svgSchema } from '../utils/svg-sanitize-schema';
 import { resolvePostImage } from '../utils/markdown';
 import type { Post } from '../utils/markdown';
 import 'highlight.js/styles/github-dark.css';
+import 'katex/dist/katex.min.css';
 
 interface BlogPostProps {
   post: Post;
@@ -37,8 +40,8 @@ export default function BlogPost({ post }: BlogPostProps) {
 
       <div className="blog-post-content">
         <ReactMarkdown
-          remarkPlugins={[remarkGfm]}
-          rehypePlugins={[rehypeRaw, [rehypeSanitize, svgSchema], rehypeHighlight]}
+          remarkPlugins={[remarkGfm, remarkMath]}
+          rehypePlugins={[rehypeRaw, [rehypeSanitize, svgSchema], rehypeHighlight, rehypeKatex]}
           components={{
             img: ({ src, alt }) =>
               typeof src === 'string' ? (
